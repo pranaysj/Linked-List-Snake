@@ -1,9 +1,9 @@
 #pragma once
-#include "Graphics/GraphicService.h"
-#include "Event/EventService.h"
-#include "UI/UIService.h"
-#include "Sound/SoundService.h"
-#include "Time/TimeService.h"
+#include "../header/Graphics/GraphicService.h"
+#include "../header/Event/EventService.h"
+#include "../header/UI/UIService.h"
+#include "../header/Sound/SoundService.h"
+#include "../header/Time/TimeService.h"
 
 namespace Global
 {
