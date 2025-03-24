@@ -1,11 +1,14 @@
 #pragma once
-#include"../header/Level/LevelView.h"
+#include"../header/Level/LevelModel.h"
 
 namespace Level 
 {
+	class LevelView;
+
 	class LevelController 
 	{
 	private:
+		LevelModel* level_model;
 		LevelView* level_view;
 
 	public:
@@ -15,5 +18,8 @@ namespace Level
 		void initialize();
 		void update();
 		void render();
+
+		float getCellWidth();
+		float getCellHeight();
 	};
 }

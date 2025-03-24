@@ -7,12 +7,18 @@ namespace Level
 
 	LevelView::LevelView()
 	{
-		background_rectangle = new RectangleShapeView();
+		createViews();
 	}
 
 	LevelView::~LevelView()
 	{
-		delete(background_rectangle);
+		destory();
+	}
+
+	void LevelView::createViews()
+	{
+		background_rectangle = new RectangleShapeView();
+		border_rectangle = new RectangleShapeView();
 	}
 
 	void LevelView::initialize()
@@ -21,6 +27,7 @@ namespace Level
 		calculateGridExtents();
 		initializeBorder();
 	}
+
 
 	void LevelView::initializeBackground()
 	{

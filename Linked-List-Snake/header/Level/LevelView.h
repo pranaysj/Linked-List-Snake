@@ -15,6 +15,8 @@ namespace Level
 		float grid_width;
 		float grid_height;
 		
+		void createViews();
+
 		void initializeBackground();
 		void initializeBorder();
 
