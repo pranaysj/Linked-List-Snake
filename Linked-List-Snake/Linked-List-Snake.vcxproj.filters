@@ -84,6 +84,9 @@
     <ClCompile Include="source\Level\LevelView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\UI\LevelSelection\LevelSelectionUIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Main\GameService.h">
@@ -159,6 +162,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\Level\LevelView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\LevelSelection\LevelSelectionUIController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
