@@ -1,4 +1,5 @@
 #pragma once
+#include"../header/Player/Direction.h"
 
 namespace Player
 {
@@ -13,7 +14,11 @@ namespace Player
 	private:
 		const int initial_snake_length = 10;
 
+		const Direction default_direction = Direction::RIGHT;
+
+
 		SnakeState current_snake_state;
+		
 
 		void processPlayerInput();
 		void updateSnakeDirection();
