@@ -11,7 +11,10 @@ namespace Level
 		LevelNumber current_level;
 
 		void createLevelController();
+
 		void destory();
+
+		void spawnPlayer();
 
 	public:
 		LevelService();
@@ -22,5 +25,7 @@ namespace Level
 		void render();
 
 		void createLevel(LevelNumber level_to_create);
+		
+
 	};
 }
