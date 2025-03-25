@@ -81,12 +81,14 @@ namespace UI
 		{
 			GameService::setGameState(GameState::GAMEPLAY);
 			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
+			ServiceLocator::getInstance()->getLevelService()->createLevel(Level::LevelNumber::ONE);
 		}
 
 		void LevelSelectionUIController::doubleLinkedListButtonCallback()
 		{
 			GameService::setGameState(GameState::GAMEPLAY);
 			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
+			ServiceLocator::getInstance()->getLevelService()->createLevel(Level::LevelNumber::TWO);
 		}
 
 		void LevelSelectionUIController::menuButtonCallback()

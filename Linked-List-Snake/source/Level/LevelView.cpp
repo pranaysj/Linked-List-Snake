@@ -76,10 +76,12 @@ namespace Level
 	void LevelView::update()
 	{
 		background_rectangle->update();
+		border_rectangle->update();
 	}
 
 	void LevelView::render()
 	{
 		background_rectangle->render();
+		border_rectangle->render();
 	}
 }
