@@ -20,6 +20,7 @@ namespace Player
 		void createBodyPartImage();
 		void initializeBodyPartImage();
 		sf::Vector2f getBodyPartScreenPosition();
+		float getRotationAngle();
 
 		void destory();
 
@@ -29,9 +30,10 @@ namespace Player
 		~BodyPart();
 
 		void inititlize(float width, float height, sf::Vector2i position, Direction dir);
-		void update();
+		void updatePosition();
 		void render();
 
+		void setDirection(Direction direction);
 	};
 	
 }

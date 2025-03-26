@@ -42,6 +42,7 @@ namespace Player
 	void BodyPart::initializeBodyPartImage()
 	{
 		bodypart_image->initialize(Config::snake_body_texture_path, bodypart_width, bodypart_height, getBodyPartScreenPosition());
+		bodypart_image->setOriginAtCentre();
 	}
 
 	sf::Vector2f BodyPart::getBodyPartScreenPosition()
@@ -52,8 +53,34 @@ namespace Player
 		return sf::Vector2f(x_screen_position, y_screen_position);
 	}
 
-	void BodyPart::update()
+	float BodyPart::getRotationAngle()
 	{
+		switch (direction)
+		{
+		case Direction::UP:
+			return 270.0f;
+
+		case Player::Direction::DOWN:
+			return 90.0f;
+
+		case Player::Direction::LEFT:
+			return 180.0f;
+
+		case Player::Direction::RIGHT:
+			return 0.0f;
+
+		}
+	}
+
+	void BodyPart::setDirection(Direction direction)
+	{
+		this->direction = direction;
+	}
+
+	void BodyPart::updatePosition()
+	{
+		bodypart_image->setPosition(getBodyPartScreenPosition());
+		bodypart_image->setRotation(getRotationAngle());
 		bodypart_image->update();
 	}
 
@@ -61,5 +88,6 @@ namespace Player
 	{
 		bodypart_image->render();
 	}
+
 }
 
