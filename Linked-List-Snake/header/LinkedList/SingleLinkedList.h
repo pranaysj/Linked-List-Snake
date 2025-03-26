@@ -8,17 +8,19 @@ namespace LinkedList
 	private:
 		Node* head_node;
 
-		float nod_widtgh;
-		float nod_height;
+		float node_widtgh;
+		float node_height;
 
 		sf::Vector2i default_position;
 		Direction default_direction;
+
+		Node* createNode();
 
 	public:
 		SingleLinkedList();
 		~SingleLinkedList();
 
-		void initialize();
+		void initialize(float width, float height, sf::Vector2i position, Direction dir);
 		void render();
 	};
 }
