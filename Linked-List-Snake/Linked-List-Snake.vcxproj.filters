@@ -188,7 +188,13 @@
     <ClInclude Include="header\Player\BodyPart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="header\Player\Node.h">
+    <ClInclude Include="header\LinkedList\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedList\SingleLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\LinkedList\SingleLinkedList.cpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
