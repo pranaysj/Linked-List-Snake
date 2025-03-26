@@ -8,6 +8,6 @@ namespace LinkedList
 	struct Node
 	{
 		BodyPart bodypart;
-		Node* node = nullptr;
+		Node* next = nullptr;
 	};
 }

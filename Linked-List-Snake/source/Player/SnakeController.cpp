@@ -28,11 +28,16 @@ namespace Player
 		float height = ServiceLocator::getInstance()->getLevelService()->getCellHeight();
 		
 		single_linked_list->initialize(width, height, default_position, default_direction);
+
+	 
 	}
 
 	void SnakeController::spawnSnake()
 	{
-		single_linked_list->createHeadNode();
+		for (int i = 0; i < initial_snake_length; i++)
+		{
+			single_linked_list->insertNodeAtTail();
+		}
 	}
 
 	void SnakeController::respawnSnake()
