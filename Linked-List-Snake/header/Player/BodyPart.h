@@ -11,7 +11,7 @@ namespace Player
 	private:
 		ImageView* bodypart_image;
 
-		sf::Vector2f grid_position;
+		sf::Vector2i grid_position;
 		Direction direction;
 
 		float bodypart_width;

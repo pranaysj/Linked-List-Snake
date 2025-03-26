@@ -185,5 +185,8 @@
     <ClInclude Include="header\Player\BodyPart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="header\Player\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -169,6 +169,7 @@
     <ClInclude Include="header\Level\LevelView.h" />
     <ClInclude Include="header\Player\BodyPart.h" />
     <ClInclude Include="header\Player\Direction.h" />
+    <ClInclude Include="header\Player\Node.h" />
     <ClInclude Include="header\Player\PlayerService.h" />
     <ClInclude Include="header\Player\SnakeController.h" />
     <ClInclude Include="header\Time\TimeService.h" />
