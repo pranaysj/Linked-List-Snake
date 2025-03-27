@@ -1,9 +1,11 @@
-#include"../header/Player/SnakeController.h"
-#include"../header/Global/ServiceLocator.h"
+#include "../header/Player/SnakeController.h"
+#include "../header/Global/ServiceLocator.h"
+#include "../header/Event/EventService.h"
 
 namespace Player
 {
 	using namespace Global;
+	using namespace Event;
 
 	SnakeController::SnakeController()
 	{
@@ -26,10 +28,8 @@ namespace Player
 	{
 		float width = ServiceLocator::getInstance()->getLevelService()->getCellWidth();
 		float height = ServiceLocator::getInstance()->getLevelService()->getCellHeight();
-		
-		single_linked_list->initialize(width, height, default_position, default_direction);
 
-	 
+		single_linked_list->initialize(width, height, default_position, default_direction);
 	}
 
 	void SnakeController::spawnSnake()
@@ -56,6 +56,24 @@ namespace Player
 
 	void SnakeController::processPlayerInput()
 	{
+		EventService *event = ServiceLocator::getInstance()->getEventService();
+
+		if (event->pressedUpArrowKey() && current_snake_dircetion != Direction::DOWN)
+		{
+			current_snake_dircetion = Direction::UP;
+		}
+		else if (event->pressedDownArrowKey() && current_snake_dircetion != Direction::UP)
+		{
+			current_snake_dircetion = Direction::DOWN;
+		}
+		else if (event->pressedRightArrowKey() && current_snake_dircetion != Direction::LEFT)
+		{
+			current_snake_dircetion = Direction::RIGHT;
+		}
+		else if (event->pressedLeftArrowKey() && current_snake_dircetion != Direction::RIGHT)
+		{
+			current_snake_dircetion = Direction::LEFT;
+		}
 	}
 
 	void SnakeController::updateSnakeDirection()
@@ -80,7 +98,31 @@ namespace Player
 
 	void SnakeController::destroy()
 	{
-		delete(single_linked_list);
+		delete (single_linked_list);
+	}
+
+	void SnakeControlller::updateNodeDirection(Direction direction_to_set)
+	{
+		Node *cur_node = head_node;
+
+		while (cur_node->next != nullptr)
+		{
+			Dircetion previous_direction = cur_node->bodypart.getDirection();
+			cur_node->bodypart.setDirection(dircetion_to_set);
+			direction_to_set = previous_direction;
+			cur_node = cur_node->next;
+		}
+	}
+
+	void SingleLinkedList::updateNodePosition()
+	{
+		Node *cur_node = head_node;
+
+		while (cur_node != nullptr)
+		{
+			cur_node->bodypart.updatePosition();
+			cur_node = cur_node->next;
+		}
 	}
 
 	void SnakeController::update()
