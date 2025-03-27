@@ -1,9 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "UI/Interface/IUIController.h"
-#include "UI//UIElement/ButtonView.h"
-#include "UI//UIElement/TextView.h"
-#include "UI//UIElement/ImageView.h"
+#include "../header/UI/Interface/IUIController.h"
+#include "../header/UI//UIElement/ButtonView.h"
+#include "../header/UI//UIElement/TextView.h"
+#include "../header/UI//UIElement/ImageView.h"
 
 namespace UI
 {

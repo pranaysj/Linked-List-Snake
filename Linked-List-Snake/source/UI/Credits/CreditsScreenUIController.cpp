@@ -1,9 +1,9 @@
-#include "UI/Credits/CreditsScreenUIController.h"
-#include "Main/GameService.h"
-#include "Graphics/GraphicService.h"
-#include "Sound/SoundService.h"
-#include "Event/EventService.h"
-#include "Global/Config.h"
+#include "../header/UI/Credits/CreditsScreenUIController.h"
+#include "../header/Main/GameService.h"
+#include "../header/Graphics/GraphicService.h"
+#include "../header/Sound/SoundService.h"
+#include "../header/Event/EventService.h"
+#include "../header/Global/Config.h"
 
 namespace UI
 {

@@ -1,9 +1,11 @@
 #pragma once
-#include "Graphics/GraphicService.h"
-#include "Event/EventService.h"
-#include "UI/UIService.h"
-#include "Sound/SoundService.h"
-#include "Time/TimeService.h"
+#include "../header/Graphics/GraphicService.h"
+#include "../header/Event/EventService.h"
+#include "../header/UI/UIService.h"
+#include "../header/Sound/SoundService.h"
+#include "../header/Time/TimeService.h"
+#include "../header/Level/LevelService.h"
+#include "../header/Player/PlayerService.h"
 
 namespace Global
 {
@@ -15,6 +17,8 @@ namespace Global
         Sound::SoundService* sound_service;
         UI::UIService* ui_service;
         Time::TimeService* time_service;
+        Level::LevelService* level_service;
+        Player::PlayerService* player_service;
 
         ServiceLocator();
         ~ServiceLocator();
@@ -34,6 +38,9 @@ namespace Global
         Sound::SoundService* getSoundService();
         UI::UIService* getUIService();
         Time::TimeService* getTimeService();
+        Level::LevelService* getLevelService();
+        Player::PlayerService* getPlayerService();
+
         void deleteServiceLocator();
     };
 }
