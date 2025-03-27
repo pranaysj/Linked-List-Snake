@@ -1,12 +1,12 @@
 #pragma once
-#include"../header/LinkedList/Node.h"
+#include "../header/LinkedList/Node.h"
 
 namespace LinkedList
 {
 	class SingleLinkedList
 	{
 	private:
-		Node* head_node;
+		Node *head_node;
 
 		float node_width;
 		float node_height;
@@ -14,9 +14,9 @@ namespace LinkedList
 		sf::Vector2i default_position;
 		Direction default_direction;
 
-		Node* createNode();
+		Node *createNode();
 
-		sf::Vector2i getNewNodePosition(Node* reference_node);
+		sf::Vector2i getNewNodePosition(Node *reference_node);
 
 	public:
 		SingleLinkedList();
@@ -26,5 +26,8 @@ namespace LinkedList
 		void render();
 
 		void insertNodeAtTail();
+
+		void updateNodeDirection(Direction direction_to_set);
+		void updateNodePosition();
 	};
 }

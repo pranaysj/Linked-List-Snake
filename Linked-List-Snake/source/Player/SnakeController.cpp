@@ -78,10 +78,12 @@ namespace Player
 
 	void SnakeController::updateSnakeDirection()
 	{
+		single_linked_list->updateNodeDirection(current_snake_dircetion);
 	}
 
 	void SnakeController::moveSnake()
 	{
+		single_linked_list->updateNodePosition();
 	}
 
 	void SnakeController::processSnakeCollision()
@@ -101,39 +103,25 @@ namespace Player
 		delete (single_linked_list);
 	}
 
-	void SnakeControlller::updateNodeDirection(Direction direction_to_set)
+	void SnakeController::delayedUpdate()
 	{
-		Node *cur_node = head_node;
+		elapsed_duration += ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
 
-		while (cur_node->next != nullptr)
+		if (elapsed_duration >= movement_frame_duration)
 		{
-			Dircetion previous_direction = cur_node->bodypart.getDirection();
-			cur_node->bodypart.setDirection(dircetion_to_set);
-			direction_to_set = previous_direction;
-			cur_node = cur_node->next;
+			elapsed_duration = 0.0f;
+			updateSnakeDirection();
+			processSnakeCollision();
+			moveSnake();
 		}
 	}
-
-	void SingleLinkedList::updateNodePosition()
-	{
-		Node *cur_node = head_node;
-
-		while (cur_node != nullptr)
-		{
-			cur_node->bodypart.updatePosition();
-			cur_node = cur_node->next;
-		}
-	}
-
 	void SnakeController::update()
 	{
 		switch (current_snake_state)
 		{
 		case SnakeState::ALIVE:
 			processPlayerInput();
-			updateSnakeDirection();
-			processSnakeCollision();
-			moveSnake();
+			delayedUpdate();
 			break;
 
 		case SnakeState::DEAD:

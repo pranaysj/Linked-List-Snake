@@ -1,4 +1,4 @@
-#include"../header/LinkedList/SingleLinkedList.h"
+#include "../header/LinkedList/SingleLinkedList.h"
 
 namespace LinkedList
 {
@@ -9,7 +9,7 @@ namespace LinkedList
 
 	SingleLinkedList::~SingleLinkedList()
 	{
-		delete(head_node);
+		delete (head_node);
 	}
 
 	void SingleLinkedList::initialize(float width, float height, sf::Vector2i position, Direction dir)
@@ -20,12 +20,12 @@ namespace LinkedList
 		default_direction = dir;
 	}
 
-	Node* SingleLinkedList::createNode()
+	Node *SingleLinkedList::createNode()
 	{
 		return new Node;
 	}
 
-	sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
+	sf::Vector2i SingleLinkedList::getNewNodePosition(Node *reference_node)
 	{
 		sf::Vector2i reference_position = reference_node->bodypart.getPosition();
 		Direction reference_direction = reference_node->bodypart.getDirection();
@@ -45,16 +45,17 @@ namespace LinkedList
 			return sf::Vector2i(reference_position.x + 1, reference_position.y);
 			break;
 		}
- 
+
 		return default_position;
 	}
 
 	void SingleLinkedList::insertNodeAtTail()
 	{
-		Node* new_node = new Node();
-		Node* cur_node = head_node;
+		Node *new_node = new Node();
+		Node *cur_node = head_node;
 
-		if (cur_node == nullptr) {
+		if (cur_node == nullptr)
+		{
 			head_node = new_node;
 			new_node->bodypart.inititlize(node_width, node_height, default_position, default_direction);
 			return;
@@ -69,9 +70,33 @@ namespace LinkedList
 		new_node->bodypart.inititlize(node_width, node_height, getNewNodePosition(cur_node), cur_node->bodypart.getDirection());
 	}
 
+	void SingleLinkedList::updateNodeDirection(Direction direction_to_set)
+	{
+		Node *cur_node = head_node;
+
+		while (cur_node->next != nullptr)
+		{
+			Direction previous_direction = cur_node->bodypart.getDirection();
+			cur_node->bodypart.setDirection(direction_to_set);
+			direction_to_set = previous_direction;
+			cur_node = cur_node->next;
+		}
+	}
+
+	void SingleLinkedList::updateNodePosition()
+	{
+		Node *cur_node = head_node;
+
+		while (cur_node != nullptr)
+		{
+			cur_node->bodypart.updatePosition();
+			cur_node = cur_node->next;
+		}
+	}
+
 	void SingleLinkedList::render()
 	{
-		Node* cur_node = head_node;
+		Node *cur_node = head_node;
 
 		while (cur_node->next != nullptr)
 		{
