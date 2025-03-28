@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML //System/Vector2.hpp>
+#include <SFML/System/Vector2.hpp>
 #include "../header/Player/Direction.h"
 #include "../header/LinkedList/SingleLinkedList.h"
 
@@ -21,6 +21,9 @@ namespace Player
 		const sf::Vector2i default_position = sf::Vector2i(25, 13);
 		const Direction default_direction = Direction::RIGHT;
 
+		float elapsed_duration = 0.0f;
+		float movement_frame_duration = 0.1f;
+
 		SnakeState current_snake_state;
 		Direction current_snake_dircetion;
 
@@ -35,8 +38,6 @@ namespace Player
 
 		void createLinkedList();
 
-		void updateNodeDirection(Direction direction_to_set);
-		void updateNodePosition();
 		void destroy();
 
 	public:
@@ -52,5 +53,7 @@ namespace Player
 
 		void setSnakeState(SnakeState state);
 		SnakeState getSnakeState();
+
+		void delayedUpdate();
 	};
 }

@@ -39,10 +39,10 @@ namespace LinkedList
 			return sf::Vector2i(reference_position.x, reference_position.y + 1);
 			break;
 		case Player::Direction::LEFT:
-			return sf::Vector2i(reference_position.x - 1, reference_position.y);
+			return sf::Vector2i(reference_position.x + 1, reference_position.y);
 			break;
 		case Player::Direction::RIGHT:
-			return sf::Vector2i(reference_position.x + 1, reference_position.y);
+			return sf::Vector2i(reference_position.x - 1, reference_position.y);
 			break;
 		}
 
