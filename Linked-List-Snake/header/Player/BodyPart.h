@@ -1,6 +1,6 @@
 #pragma once
-#include"../header/UI/UIElement/ImageView.h"
-#include"../header/Player/Direction.h"
+#include "../header/UI/UIElement/ImageView.h"
+#include "../header/Player/Direction.h"
 
 namespace Player
 {
@@ -9,31 +9,27 @@ namespace Player
 	class BodyPart
 	{
 	private:
-		ImageView* bodypart_image;
+		ImageView *bodypart_image;
 
 		sf::Vector2i grid_position;
 		Direction direction;
 
 		float bodypart_width;
 		float bodypart_height;
-		
+
 		void createBodyPartImage();
 		void initializeBodyPartImage();
 		sf::Vector2f getBodyPartScreenPosition();
 		float getRotationAngle();
-
-		sf::Vector2i getNextPosition();
 
 		sf::Vector2i getNextPositionRight();
 		sf::Vector2i getNextPositionDown();
 		sf::Vector2i getNextPositionLeft();
 		sf::Vector2i getNextPositionUp();
 
-
 		void destory();
 
 	public:
-
 		BodyPart();
 		~BodyPart();
 
@@ -46,6 +42,8 @@ namespace Player
 
 		Direction getDirection();
 		sf::Vector2i getPosition();
+
+		sf::Vector2i getNextPosition();
 	};
-	
+
 }

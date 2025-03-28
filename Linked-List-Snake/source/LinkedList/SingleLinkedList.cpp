@@ -83,6 +83,30 @@ namespace LinkedList
 		}
 	}
 
+	bool SingleLinkedList::processNodeCollision()
+	{
+		if (head_node == nullptr)
+		{
+			return false;
+		}
+
+		sf::Vector2i predicted_position = head_node->bodypart.getNextPosition();
+
+		Node *cur_node = head_node->next;
+
+		while (cur_node != nullptr)
+		{
+			if (cur_node->bodypart.getPosition() == predicted_position)
+			{
+				return true;
+			}
+
+			cur_node = cur_node->next;
+		}
+
+		return false;
+	}
+
 	void SingleLinkedList::updateNodePosition()
 	{
 		Node *cur_node = head_node;
