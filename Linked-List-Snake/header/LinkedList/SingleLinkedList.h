@@ -18,6 +18,9 @@ namespace LinkedList
 
 		sf::Vector2i getNewNodePosition(Node *reference_node);
 
+		void removeNodeAtHead();
+		void removeAllNodes();
+
 	public:
 		SingleLinkedList();
 		~SingleLinkedList();

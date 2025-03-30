@@ -107,6 +107,28 @@ namespace LinkedList
 		return false;
 	}
 
+	void SingleLinkedList::removeNodeAtHead()
+	{
+		Node *cur_node = head_node;
+		head_node = cur_node->next;
+
+		cur_node->next = nullptr;
+		delete (cur_node);
+	}
+
+	void SingleLinkedList::removeAllNodes()
+	{
+		while (head_node != nullptr)
+		{
+			if (head_node == nullptr)
+			{
+				return;
+			}
+
+			removeNodeAtHead();
+		}
+	}
+
 	void SingleLinkedList::updateNodePosition()
 	{
 		Node *cur_node = head_node;
