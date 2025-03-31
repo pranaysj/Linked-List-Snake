@@ -10,7 +10,13 @@ namespace Player
 	enum class SnakeState
 	{
 		ALIVE,
-		DEAD,
+		DEAD
+	};
+
+	enum class InputState
+	{
+		WAITING,
+		PROCESSING
 	};
 
 	class SnakeController
@@ -28,6 +34,7 @@ namespace Player
 
 		SnakeState current_snake_state;
 		Direction current_snake_dircetion;
+		InputState current_input_state;
 
 		SingleLinkedList *single_linked_list;
 

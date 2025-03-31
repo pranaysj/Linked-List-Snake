@@ -59,23 +59,32 @@ namespace Player
 
 	void SnakeController::processPlayerInput()
 	{
+		if (current_input_state == InputState::PROCESSING)
+		{
+			return;
+		}
+
 		EventService *event = ServiceLocator::getInstance()->getEventService();
 
 		if (event->pressedUpArrowKey() && current_snake_dircetion != Direction::DOWN)
 		{
 			current_snake_dircetion = Direction::UP;
+			current_input_state = InputState::PROCESSING;
 		}
 		else if (event->pressedDownArrowKey() && current_snake_dircetion != Direction::UP)
 		{
 			current_snake_dircetion = Direction::DOWN;
+			current_input_state = InputState::PROCESSING;
 		}
 		else if (event->pressedRightArrowKey() && current_snake_dircetion != Direction::LEFT)
 		{
 			current_snake_dircetion = Direction::RIGHT;
+			current_input_state = InputState::PROCESSING;
 		}
 		else if (event->pressedLeftArrowKey() && current_snake_dircetion != Direction::RIGHT)
 		{
 			current_snake_dircetion = Direction::LEFT;
+			current_input_state = InputState::PROCESSING;
 		}
 	}
 
@@ -103,6 +112,7 @@ namespace Player
 		current_snake_dircetion = Direction::RIGHT;
 		elapsed_duration = 0.0f;
 		restart_counter = 0.0f;
+		current_input_state = InputState::WAITING;
 	}
 
 	void SnakeController::destroy()
@@ -124,6 +134,8 @@ namespace Player
 			{
 				moveSnake();
 			}
+
+			current_input_state = InputState::WAITING;
 		}
 	}
 
