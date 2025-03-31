@@ -42,6 +42,9 @@ namespace Player
 
 	void SnakeController::respawnSnake()
 	{
+		single_linked_list->removeAllNodes();
+		reset();
+		spawnSnake();
 	}
 
 	void SnakeController::setSnakeState(SnakeState state)
@@ -94,12 +97,12 @@ namespace Player
 		}
 	}
 
-	void SnakeController::handleRestart()
-	{
-	}
-
 	void SnakeController::reset()
 	{
+		current_snake_state = SnakeState::ALIVE;
+		current_snake_dircetion = Direction::RIGHT;
+		elapsed_duration = 0.0f;
+		restart_counter = 0.0f;
 	}
 
 	void SnakeController::destroy()
@@ -123,6 +126,17 @@ namespace Player
 			}
 		}
 	}
+
+	void SnakeController::handleRestart()
+	{
+		restart_counter += ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
+
+		if (restart_counter >= restart_duration)
+		{
+			respawnSnake();
+		}
+	}
+
 	void SnakeController::update()
 	{
 		switch (current_snake_state)
