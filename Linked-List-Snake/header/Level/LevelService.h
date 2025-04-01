@@ -31,6 +31,6 @@ namespace Level
 		float getCellWidth();
 		float getCellHeight();
 
-		void spawnLevelElements(LevelNumber level_to_load);
+		//void spawnLevelElements(LevelNumber level_to_load);
 	};
 }
