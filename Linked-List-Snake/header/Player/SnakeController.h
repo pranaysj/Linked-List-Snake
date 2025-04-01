@@ -64,7 +64,6 @@ namespace Player
 		SnakeState getSnakeState();
 
 		void delayedUpdate();
-		void respawn();
 
 	};
 }
