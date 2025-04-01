@@ -66,6 +66,5 @@ namespace Player
 		void delayedUpdate();
 		void respawn();
 
-		void handleRestart();
 	};
 }
