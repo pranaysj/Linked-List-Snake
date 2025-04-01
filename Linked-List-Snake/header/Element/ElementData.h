@@ -5,7 +5,7 @@ namespace Element
 {
 	enum class ElementType
 	{
-		OBSTCALE,
+		OBSTACLE,
 	};
 
 	struct ElementData

@@ -25,7 +25,7 @@ namespace Element
 		{
 			switch (element_data_list[i].element_type)
 			{
-			case ElementType::OBSTCALE:
+			case ElementType::OBSTACLE:
 				spawnObstacle(element_data_list[i].position, cell_width, cell_height);
 				break;
 			}
