@@ -1,4 +1,4 @@
-#include "Global/Config.h"
+#include "../header/Global/Config.h"
 
 namespace Global
 {
