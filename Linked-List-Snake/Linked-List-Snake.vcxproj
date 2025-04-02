@@ -138,6 +138,7 @@
     <ClCompile Include="source\Element\ElementService.cpp" />
     <ClCompile Include="source\Element\Obstcale.cpp" />
     <ClCompile Include="source\Event\EventService.cpp" />
+    <ClCompile Include="source\Food\FoodService.cpp" />
     <ClCompile Include="source\Global\Config.cpp" />
     <ClCompile Include="source\Global\ServiceLocator.cpp" />
     <ClCompile Include="source\Graphics\GraphicService.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="header\Element\Obstcale.h" />
     <ClInclude Include="header\Event\EventService.h" />
     <ClInclude Include="header\Food\FoodItem.h" />
+    <ClInclude Include="header\Food\FoodService.h" />
     <ClInclude Include="header\Food\FoodType.h" />
     <ClInclude Include="header\Global\Config.h" />
     <ClInclude Include="header\Global\ServiceLocator.h" />

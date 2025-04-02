@@ -18,6 +18,8 @@ namespace Level
 
 		void spawnLevelElements(LevelNumber level_to_load);
 
+		void spawnFood();
+
 	public:
 		LevelService();
 		~LevelService();

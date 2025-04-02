@@ -9,10 +9,12 @@ namespace Food
 
     FoodItem::FoodItem()
     {
+        food_image = new ImageView();
     }
 
     FoodItem::~FoodItem()
     {
+        delete(food_image);
     }
 
     void FoodItem::initialize(sf::Vector2i grid_pos, float width, float height, FoodType type)
