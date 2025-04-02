@@ -141,6 +141,11 @@ namespace Player
 		}
 	}
 
+	std::vector<sf::Vector2i> SnakeController::getCurrentSnakePositionList()
+	{
+		return single_linked_list->getNodesPositionList();
+	}
+
 	void SnakeController::handleRestart()
 	{
 		restart_counter += ServiceLocator::getInstance()->getTimeService()->getDeltaTime();

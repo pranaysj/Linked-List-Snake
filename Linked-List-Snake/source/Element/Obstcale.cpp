@@ -41,6 +41,11 @@ namespace Element
 		return sf::Vector2f(screen_position_x, screen_position_y);
 	}
 
+	sf::Vector2i Obstcale::getObstaclePosition()
+	{
+		return grid_position;
+	}
+
 	void Obstcale::update()
 	{
 		obstcale_image->update();
@@ -50,5 +55,6 @@ namespace Element
 	{
 		obstcale_image->render();
 	}
+
 }
 
