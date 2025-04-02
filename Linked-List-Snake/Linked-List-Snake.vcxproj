@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Food\FoodItem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\Element\ElementService.cpp" />
     <ClCompile Include="source\Element\Obstcale.cpp" />
@@ -169,6 +170,8 @@
     <ClInclude Include="header\Element\ElementService.h" />
     <ClInclude Include="header\Element\Obstcale.h" />
     <ClInclude Include="header\Event\EventService.h" />
+    <ClInclude Include="header\Food\FoodItem.h" />
+    <ClInclude Include="header\Food\FoodType.h" />
     <ClInclude Include="header\Global\Config.h" />
     <ClInclude Include="header\Global\ServiceLocator.h" />
     <ClInclude Include="header\Graphics\GraphicService.h" />

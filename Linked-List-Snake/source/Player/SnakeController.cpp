@@ -26,6 +26,8 @@ namespace Player
 
 	void SnakeController::initialize()
 	{
+		current_snake_dircetion = default_direction;
+
 		float width = ServiceLocator::getInstance()->getLevelService()->getCellWidth();
 		float height = ServiceLocator::getInstance()->getLevelService()->getCellHeight();
 
