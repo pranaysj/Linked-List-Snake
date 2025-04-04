@@ -133,7 +133,7 @@ namespace LinkedList
 	{
 		std::vector<sf::Vector2i> nodes_position_list;
 
-		Node* cur_node = head_node;
+		Node *cur_node = head_node;
 
 		while (cur_node != nullptr)
 		{
@@ -142,6 +142,11 @@ namespace LinkedList
 		}
 
 		return nodes_position_list;
+	}
+
+	Node *SingleLinkedList::getHeadNode()
+	{
+		return head_node;
 	}
 
 	void SingleLinkedList::updateNodePosition()

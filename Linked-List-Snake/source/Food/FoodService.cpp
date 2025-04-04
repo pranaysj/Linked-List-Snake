@@ -1,13 +1,14 @@
-#include"../header/Food/FoodService.h"
-#include"../header/Global/ServiceLocator.h"
-#include"../header/Level/LevelModel.h"
+#include "../header/Food/FoodService.h"
+#include "../header/Global/ServiceLocator.h"
+#include "../header/Level/LevelModel.h"
+#include "FoodService.h"
 
 namespace Food
 {
 	using namespace Global;
 	using namespace Level;
 
-	FoodService::FoodService():random_engine(random_device())
+	FoodService::FoodService() : random_engine(random_device())
 	{
 		current_food_item = nullptr;
 	}
@@ -21,7 +22,7 @@ namespace Food
 	{
 		if (current_food_item)
 		{
-			delete(current_food_item);
+			delete (current_food_item);
 		}
 	}
 
@@ -41,7 +42,6 @@ namespace Food
 
 		cell_width = ServiceLocator::getInstance()->getLevelService()->getCellWidth();
 		cell_height = ServiceLocator::getInstance()->getLevelService()->getCellHeight();
-
 	}
 
 	void FoodService::stopFoodSpawning()
@@ -49,6 +49,16 @@ namespace Food
 		current_spawning_status = FoodSpawningStatus::IN_ACTIVE;
 		destroyFood();
 		reset();
+	}
+
+	bool FoodService::processFoodCollision(LinkedList::Node *head_node, FoodType &out_food_type)
+	{
+		if (current_food_item && current_food_item->getFoodPosition() == head_node->bodypart.getPosition())
+		{
+			out_food_type = current_food_item->getFoodType();
+			return true;
+		}
+		return false;
 	}
 
 	bool FoodService::isValidPosition(std::vector<sf::Vector2i> position_data, sf::Vector2i food_position)
@@ -77,7 +87,6 @@ namespace Food
 		} while (!isValidPosition(player_position_data, spawn_position) || !isValidPosition(elements_position_data, spawn_position));
 
 		return spawn_position;
-
 	}
 
 	void FoodService::spawnFood()
@@ -85,9 +94,9 @@ namespace Food
 		current_food_item = createFood(getValidSpawnPosition(), getRandomFoodType());
 	}
 
-	FoodItem* FoodService::createFood(sf::Vector2i position, FoodType type)
+	FoodItem *FoodService::createFood(sf::Vector2i position, FoodType type)
 	{
-		FoodItem* food_item = new FoodItem();
+		FoodItem *food_item = new FoodItem();
 		food_item->initialize(position, cell_width, cell_height, type);
 
 		return food_item;

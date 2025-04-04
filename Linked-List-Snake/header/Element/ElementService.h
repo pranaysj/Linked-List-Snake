@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <SFML/System/Vector2.hpp>
+#include "../header/LinkedList/Node.h"
 
 namespace Element
 {
@@ -10,7 +11,7 @@ namespace Element
 	class ElementService
 	{
 	private:
-		std::vector<Obstcale*> obstacle_list;
+		std::vector<Obstcale *> obstacle_list;
 
 		void spawnObstacle(sf::Vector2i position, float cell_width, float cell_height);
 
@@ -22,8 +23,10 @@ namespace Element
 		void update();
 		void render();
 
-		const void spawnElements(std::vector<ElementData>& element_data_list, float cell_width, float cell_height);
+		const void spawnElements(std::vector<ElementData> &element_data_list, float cell_width, float cell_height);
 
 		std::vector<sf::Vector2i> getElementsPositionList();
+
+		bool processElementsCollision(LinkedList::Node *head_node);
 	};
 }

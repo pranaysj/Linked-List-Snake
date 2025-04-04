@@ -1,6 +1,7 @@
 #include "../header/Food/FoodItem.h"
 #include "../header/Global/Config.h"
 #include "../header/Level/LevelView.h"
+#include "FoodItem.h"
 
 namespace Food
 {
@@ -14,7 +15,7 @@ namespace Food
 
     FoodItem::~FoodItem()
     {
-        delete(food_image);
+        delete (food_image);
     }
 
     void FoodItem::initialize(sf::Vector2i grid_pos, float width, float height, FoodType type)
@@ -79,6 +80,11 @@ namespace Food
         return food_type;
     }
 
+    sf::Vector2i FoodItem::getFoodPosition()
+    {
+        return grid_position;
+    }
+
     void FoodItem::update()
     {
         food_image->update();
@@ -89,4 +95,3 @@ namespace Food
         food_image->render();
     }
 }
-

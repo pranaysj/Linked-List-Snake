@@ -50,6 +50,8 @@ namespace Player
 		void processElementsCollision();
 		void processFoodCollision();
 
+		void OnFoodCollected(Food::FoodType food_type);
+
 		void destroy();
 
 	public:
@@ -69,6 +71,5 @@ namespace Player
 		void delayedUpdate();
 
 		std::vector<sf::Vector2i> getCurrentSnakePositionList();
-
 	};
 }

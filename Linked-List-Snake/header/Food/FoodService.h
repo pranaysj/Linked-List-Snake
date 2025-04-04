@@ -15,7 +15,7 @@ namespace Food
 	class FoodService
 	{
 	private:
-		FoodItem* current_food_item;
+		FoodItem *current_food_item;
 
 		float cell_width;
 		float cell_height;
@@ -28,7 +28,7 @@ namespace Food
 		std::default_random_engine random_engine;
 		std::random_device random_device;
 
-		FoodItem* createFood(sf::Vector2i position, FoodType type);
+		FoodItem *createFood(sf::Vector2i position, FoodType type);
 		void spawnFood();
 
 		sf::Vector2i getValidSpawnPosition();
@@ -37,7 +37,6 @@ namespace Food
 
 		bool isValidPosition(std::vector<sf::Vector2i> position_data, sf::Vector2i food_position);
 
-		void destroyFood();
 		void updateElapsedDuration();
 		void handleFoodSpawning();
 		void reset();
@@ -53,6 +52,7 @@ namespace Food
 		void startFoodSpawning();
 		void stopFoodSpawning();
 
-
+		bool processFoodCollision(LinkedList::Node *head_node, FoodType &out_food_type);
+		void destroyFood();
 	};
 }
