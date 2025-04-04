@@ -1,5 +1,5 @@
-#include "Sound/SoundService.h"
-#include "Global/Config.h"
+#include "../header/Sound/SoundService.h"
+#include "../header/Global/Config.h"
 
 namespace Sound
 {
