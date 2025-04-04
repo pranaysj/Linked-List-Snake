@@ -37,15 +37,18 @@ namespace Player
 		InputState current_input_state;
 
 		SingleLinkedList *single_linked_list;
+		void createLinkedList();
 
 		void processPlayerInput();
 		void updateSnakeDirection();
 		void moveSnake();
-		void processSnakeCollision();
 		void handleRestart();
 		void reset();
 
-		void createLinkedList();
+		void processSnakeCollision();
+		void processBodyCollision();
+		void processElementsCollision();
+		void processFoodCollision();
 
 		void destroy();
 
