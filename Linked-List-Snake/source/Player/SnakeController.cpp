@@ -4,7 +4,7 @@
 #include "../header/Event/EventService.h"
 #include "../header/Element/ElementService.h"
 #include "../header/Food/FoodService.h"
-#include "SnakeController.h"
+#include "../header/Player/SnakeController.h"
 
 namespace Player
 {

@@ -1,7 +1,7 @@
 #include "../header/Food/FoodService.h"
 #include "../header/Global/ServiceLocator.h"
 #include "../header/Level/LevelModel.h"
-#include "FoodService.h"
+#include "../header/Food/FoodService.h"
 
 namespace Food
 {
@@ -23,6 +23,7 @@ namespace Food
 		if (current_food_item)
 		{
 			delete (current_food_item);
+			current_food_item = nullptr;
 		}
 	}
 

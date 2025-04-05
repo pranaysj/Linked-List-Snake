@@ -1,7 +1,7 @@
 #include "../header/Food/FoodItem.h"
 #include "../header/Global/Config.h"
 #include "../header/Level/LevelView.h"
-#include "FoodItem.h"
+#include "../header/Food/FoodItem.h"
 
 namespace Food
 {

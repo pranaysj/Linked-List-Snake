@@ -3,9 +3,12 @@
 #include <random>
 #include <SFML/System/Vector2.hpp>
 #include "../header/Food/FoodItem.h"
+#include "../header/LinkedList/Node.h"
 
 namespace Food
 {
+	using namespace LinkedList;
+
 	enum FoodSpawningStatus
 	{
 		ACTIVE,
@@ -52,7 +55,7 @@ namespace Food
 		void startFoodSpawning();
 		void stopFoodSpawning();
 
-		bool processFoodCollision(LinkedList::Node *head_node, FoodType &out_food_type);
+		bool processFoodCollision(Node *head_node, FoodType &out_food_type);
 		void destroyFood();
 	};
 }
