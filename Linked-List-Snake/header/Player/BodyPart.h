@@ -27,6 +27,7 @@ namespace Player
 		sf::Vector2i getNextPositionLeft();
 		sf::Vector2i getNextPositionUp();
 
+
 		void destory();
 
 	public:
@@ -44,6 +45,7 @@ namespace Player
 		sf::Vector2i getPosition();
 
 		sf::Vector2i getNextPosition();
+		sf::Vector2i getPrevPosition();
 	};
 
 }

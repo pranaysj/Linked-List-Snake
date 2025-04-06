@@ -25,25 +25,28 @@ namespace LinkedList
 		return new Node;
 	}
 
-	sf::Vector2i SingleLinkedList::getNewNodePosition(Node *reference_node)
+	void SingleLinkedList::initializeNode(Node* new_node, Node* reference_node, Operation operation)
 	{
-		sf::Vector2i reference_position = reference_node->bodypart.getPosition();
-		Direction reference_direction = reference_node->bodypart.getDirection();
-
-		switch (reference_direction)
+		if (reference_node == nullptr)
 		{
-		case Player::Direction::UP:
-			return sf::Vector2i(reference_position.x, reference_position.y - 1);
-			break;
-		case Player::Direction::DOWN:
-			return sf::Vector2i(reference_position.x, reference_position.y + 1);
-			break;
-		case Player::Direction::LEFT:
-			return sf::Vector2i(reference_position.x + 1, reference_position.y);
-			break;
-		case Player::Direction::RIGHT:
-			return sf::Vector2i(reference_position.x - 1, reference_position.y);
-			break;
+			new_node->bodypart.inititlize(node_width, node_height, default_position, default_direction);
+			return;
+		}
+
+		sf::Vector2i position = getNewNodePosition(reference_node, operation);
+
+		new_node->bodypart.inititlize(node_width, node_height, position, reference_node->bodypart.getDirection());
+
+	}
+
+	sf::Vector2i SingleLinkedList::getNewNodePosition(Node *reference_node, Operation operation)
+	{
+		switch (operation)
+		{
+		case Operation::HEAD:
+			return reference_node->bodypart.getNextPosition();
+		case Operation::TAIL:
+			return reference_node->bodypart.getPrevPosition();
 		}
 
 		return default_position;
