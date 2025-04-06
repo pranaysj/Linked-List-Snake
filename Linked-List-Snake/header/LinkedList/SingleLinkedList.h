@@ -13,6 +13,8 @@ namespace LinkedList
 	class SingleLinkedList
 	{
 	private:
+		int linked_list_size;
+
 		Node *head_node;
 
 		float node_width;
@@ -36,6 +38,7 @@ namespace LinkedList
 		void render();
 
 		void insertNodeAtTail();
+		void insertNodeAtHead();
 
 		void updateNodeDirection(Direction direction_to_set);
 		void updateNodePosition();
