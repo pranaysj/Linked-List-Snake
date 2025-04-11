@@ -64,7 +64,8 @@ namespace Level
             Element::ElementData(Element::ElementType::OBSTACLE, sf::Vector2i(27, 15)),
             Element::ElementData(Element::ElementType::OBSTACLE, sf::Vector2i(28, 15)),
             Element::ElementData(Element::ElementType::OBSTACLE, sf::Vector2i(29, 15)),
-        };;
+        };
+
 		std::vector<LevelData> level_configurations;
 
 		float cell_width;
