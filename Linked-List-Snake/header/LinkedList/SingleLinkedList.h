@@ -15,7 +15,7 @@ namespace LinkedList
 	private:
 		int linked_list_size;
 
-		Node *head_node;
+		Node* head_node;
 
 		float node_width;
 		float node_height;
@@ -23,12 +23,12 @@ namespace LinkedList
 		sf::Vector2i default_position;
 		Direction default_direction;
 
-		Node *createNode();
+		Node* createNode();
 		void initializeNode(Node* new_node, Node* reference_node, Operation operation);
 
-		sf::Vector2i getNewNodePosition(Node *reference_node, Operation operation);
+		sf::Vector2i getNewNodePosition(Node* reference_node, Operation operation);
 
-		void removeNodeAtHead();
+		int findMiddleNode();
 
 	public:
 		SingleLinkedList();
@@ -39,11 +39,15 @@ namespace LinkedList
 
 		void insertNodeAtTail();
 		void insertNodeAtHead();
-		int findMiddleNode();
 		void insertNodeAtMiddle();
 		void insertNodeAtIndex(int index);
-
 		void shiftNodesAfterInsertion(Node* new_node, Node* cur_node, Node* prev_node);
+
+		void removeNodeAtHead();
+		void removeNodeAtMiddle();
+		void removeNodeAt(int index);
+		void removeNodeAtIndex(int index);
+		void shiftNodesAfterRemoval(Node* cur_node);
 
 		void updateNodeDirection(Direction direction_to_set);
 		void updateNodePosition();
@@ -51,7 +55,8 @@ namespace LinkedList
 		bool processNodeCollision();
 		void removeAllNodes();
 
-		Node *getHeadNode();
+		Node* getHeadNode();
+
 		std::vector<sf::Vector2i> getNodesPositionList();
 	};
 }
