@@ -419,6 +419,11 @@ namespace LinkedList
 		return head_node;
 	}
 
+	int SingleLinkedList::getLinkedListSize()
+	{
+		return linked_list_size;
+	}
+
 	void SingleLinkedList::updateNodePosition()
 	{
 		Node *cur_node = head_node;

@@ -45,6 +45,11 @@ namespace Level
 		return level_controller->getCellHeight();
 	}
 
+	LevelNumber LevelService::getCurrentLevel()
+	{
+		return current_level;
+	}
+
 	void LevelService::spawnPlayer()
 	{
 		ServiceLocator::getInstance()->getPlayerService()->spawnPlayer();

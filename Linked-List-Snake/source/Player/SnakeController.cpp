@@ -66,6 +66,21 @@ namespace Player
 		return current_snake_state;
 	}
 
+	int SnakeController::getPlayerScore()
+	{
+		return playe_score;
+	}
+
+	TimeComplexity SnakeController::getTimeComplexity()
+	{
+		return time_complexity;
+	}
+
+	LinkedListOperations SnakeController::getLastOperation()
+	{
+		return last_linked_list_operation;
+	}
+
 	void SnakeController::processPlayerInput()
 	{
 		if (current_input_state == InputState::PROCESSING)
@@ -145,6 +160,8 @@ namespace Player
 
 			food_service->destroyFood();
 			OnFoodCollected(foodtype);
+
+			playe_score++;
 		}
 	}
 
@@ -155,41 +172,57 @@ namespace Player
 		case FoodType::PIZZA:
 			// Insert At Tail
 			single_linked_list->insertNodeAtTail();
+			time_complexity = TimeComplexity::N;
+			last_linked_list_operation = LinkedListOperations::INSERT_AT_TAIL;
 			break;
 
 		case FoodType::BURGER:
 			// Insert At Head
 			single_linked_list->insertNodeAtHead();
+			time_complexity = TimeComplexity::ONE;
+			last_linked_list_operation = LinkedListOperations::INSERT_AT_HEAD;
 			break;
 
 		case FoodType::CHEESE:
 			// Insert in Middle
 			single_linked_list->insertNodeAtMiddle();
+			time_complexity = TimeComplexity::N;
+			last_linked_list_operation = LinkedListOperations::INSERT_AT_MID;
 			break;
 
 		case FoodType::APPLE:
 			// Delete at Head
 			single_linked_list->removeNodeAtHead();
+			time_complexity = TimeComplexity::ONE;
+			last_linked_list_operation = LinkedListOperations::REMOVE_AT_HEAD;
 			break;
 
 		case FoodType::MANGO:
 			// Delete at Middle
 			single_linked_list->removeNodeAtMiddle();
+			time_complexity = TimeComplexity::N;
+			last_linked_list_operation = LinkedListOperations::REMOVE_AT_MID;
 			break;
 
 		case FoodType::ORANGE:
 			// Delete at Tail
 			single_linked_list->removeNodeAtTail();
+			time_complexity = TimeComplexity::N;
+			last_linked_list_operation = LinkedListOperations::REMOVE_AT_TAIL;
 			break;
 
 		case FoodType::POISION:
 			// Delete half the snake
 			single_linked_list->removeHalfNodes();
+			time_complexity = TimeComplexity::N;
+			last_linked_list_operation = LinkedListOperations::DELETE_HALF_LIST;
 			break;
 
 		case FoodType::ALCOHOL:
 			// Reverse the snake
 			current_snake_dircetion = single_linked_list->reverse();
+			time_complexity = TimeComplexity::N;
+			last_linked_list_operation = LinkedListOperations::REVERSE_LIST;
 			break;
 		}
 	}
@@ -200,6 +233,7 @@ namespace Player
 		elapsed_duration = 0.0f;
 		restart_counter = 0.0f;
 		current_input_state = InputState::WAITING;
+		playe_score = 0;
 	}
 
 	void SnakeController::destroy()

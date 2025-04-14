@@ -33,6 +33,8 @@ namespace Level
 		float getCellWidth();
 		float getCellHeight();
 
+		LevelNumber getCurrentLevel();
+		
 		//void spawnLevelElements(LevelNumber level_to_load);
 	};
 }
