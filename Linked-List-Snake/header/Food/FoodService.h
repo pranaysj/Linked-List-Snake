@@ -7,7 +7,7 @@
 
 namespace Food
 {
-	using namespace LinkedList;
+	using namespace LinkedListLib;
 
 	enum FoodSpawningStatus
 	{

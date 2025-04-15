@@ -26,7 +26,7 @@ namespace Player
 		void update();
 		void render();
 
-		void spawnPlayer();
+		void spawnPlayer(LinkedListType level_type);
 
 		int getPlayerScore();
 
