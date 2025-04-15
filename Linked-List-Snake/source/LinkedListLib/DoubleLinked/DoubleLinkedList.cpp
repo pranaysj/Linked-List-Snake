@@ -121,22 +121,7 @@ namespace LinkedListLib
 
 		}
 
-		void DoubleLinkedList::removeNodeAtHead()
-		{
-			linked_list_size--;
-
-			Node* cur_node = head_node;
-			head_node = head_node->next;
-
-			if (head_node != nullptr) {
-				static_cast<DoubleNode*>(head_node)->previous = nullptr;
-			}
-
-			cur_node->next = nullptr;
-			delete cur_node;
-		}
-
-		void DoubleLinkedList::removeNodeAtIndex(int index)
+		void DoubleLinkedList::removeNodeAtTail()
 		{
 			if(head_node == nullptr) return;
 			linked_list_size--;
@@ -157,6 +142,93 @@ namespace LinkedListLib
 			Node* previous = static_cast<DoubleNode*>(cur_node)->previous;
 			previous->next = nullptr;
 			delete (cur_node);
+		}
+
+		void DoubleLinkedList::removeNodeAtHead()
+		{
+			linked_list_size--;
+
+			Node* cur_node = head_node;
+			head_node = head_node->next;
+
+			if (head_node != nullptr) {
+				static_cast<DoubleNode*>(head_node)->previous = nullptr;
+			}
+
+			cur_node->next = nullptr;
+			delete cur_node;
+		}
+
+		void DoubleLinkedList::removeNodeAtMiddle()
+		{
+			if (head_node == nullptr) return; // If the list is empty, there's nothing to remove
+
+			int midIndex = findMiddleNode();  // Use the existing function to find the middle index
+			removeNodeAt(midIndex);
+		}
+
+		void DoubleLinkedList::removeNodeAt(int index)
+		{
+			if (index < 0 || index >= linked_list_size) return;
+
+			if (index == 0)
+			{
+				removeNodeAtHead();
+			}
+			else
+			{
+				removeNodeAtIndex(index);
+			}
+		}
+
+		void DoubleLinkedList::removeNodeAtIndex(int index)
+		{
+			linked_list_size--;
+
+			int currtent_indx = 0;
+			Node* cur_node = head_node;
+			Node* prev_node = nullptr;
+
+			while (cur_node != nullptr && currtent_indx < index)
+			{
+				prev_node = cur_node;
+				cur_node = cur_node->next;
+				currtent_indx++;
+			}
+
+			if (prev_node != nullptr)
+			{
+				prev_node->next = cur_node->next;
+			}
+
+			if (cur_node->next != nullptr)
+			{
+				Node* next_node = cur_node->next;
+				static_cast<DoubleNode*>(next_node)->previous = prev_node;
+			}
+
+			shiftNodesAfterRemoval(cur_node);
+			delete(cur_node);
+		}
+
+		void DoubleLinkedList::shiftNodesAfterRemoval(Node* cur_node)
+		{
+			sf::Vector2i previous_node_position = cur_node->bodypart.getPosition();
+			Direction previous_node_direction = cur_node->bodypart.getDirection();
+			cur_node = cur_node->next;
+
+			while (cur_node != nullptr)
+			{
+				sf::Vector2i temp_node_position = cur_node->bodypart.getPosition();
+				Direction temp_node_direction = cur_node->bodypart.getDirection();
+
+				cur_node->bodypart.setPosition(previous_node_position);
+				cur_node->bodypart.setDirection(previous_node_direction);
+
+				cur_node = cur_node->next;
+				previous_node_position = temp_node_position;
+				previous_node_direction = temp_node_direction;
+			}
 		}
 
 	}
