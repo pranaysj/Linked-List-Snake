@@ -1,4 +1,4 @@
-#include "../header/LinkedList/SingleLinkedList.h"
+#include "../header/LinkedListLib/SingleLinkedList.h"
 
 namespace LinkedList
 {
