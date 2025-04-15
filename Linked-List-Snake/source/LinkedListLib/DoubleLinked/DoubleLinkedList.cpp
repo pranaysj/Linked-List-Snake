@@ -34,5 +34,10 @@ namespace LinkedListLib
 
 			head_node = new_node;
 		}
+
+		void DoubleLinkedList::insertNodeAtTail()
+		{
+		}
+
 	}
 }
