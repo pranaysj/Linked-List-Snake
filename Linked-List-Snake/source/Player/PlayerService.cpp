@@ -56,6 +56,11 @@ namespace Player
 		return snake_controller->getCurrentSnakePositionList();
 	}
 
+	bool PlayerService::isPlayerDead()
+	{
+		return snake_controller->isSnakeDead();
+	}
+
 	void PlayerService::update()
 	{
 		snake_controller->update();

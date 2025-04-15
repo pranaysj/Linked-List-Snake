@@ -34,5 +34,7 @@ namespace Player
 		LinkedListOperations getLastOperation();
 
 		std::vector<sf::Vector2i> getCurrentSnakePositionList();
+
+		bool isPlayerDead();
 	};
 }

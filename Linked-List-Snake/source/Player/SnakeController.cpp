@@ -281,6 +281,11 @@ namespace Player
 		return linked_list->getNodesPositionList();
 	}
 
+	bool SnakeController::isSnakeDead()
+	{
+		return current_snake_state == SnakeState::DEAD;
+	}
+
 	void SnakeController::handleRestart()
 	{
 		restart_counter += ServiceLocator::getInstance()->getTimeService()->getDeltaTime();
