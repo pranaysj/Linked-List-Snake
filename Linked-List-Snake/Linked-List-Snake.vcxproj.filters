@@ -146,10 +146,10 @@
     <ClInclude Include="header\Level\LevelView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="header\LinkedList\Node.h">
+    <ClInclude Include="header\LinkedListLib\Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="header\LinkedList\SingleLinkedList.h">
+    <ClInclude Include="header\LinkedListLib\SingleLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\Main\GameService.h">
@@ -231,6 +231,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="header\UI\GameplayUI\GameplayUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedListLib\SingleLinked\SingleNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedListLib\DoubleLinked\DoubleNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -184,8 +184,10 @@
     <ClInclude Include="header\Level\LevelNumber.h" />
     <ClInclude Include="header\Level\LevelService.h" />
     <ClInclude Include="header\Level\LevelView.h" />
-    <ClInclude Include="header\LinkedList\Node.h" />
-    <ClInclude Include="header\LinkedList\SingleLinkedList.h" />
+    <ClInclude Include="header\LinkedListLib\DoubleLinked\DoubleNode.h" />
+    <ClInclude Include="header\LinkedListLib\Node.h" />
+    <ClInclude Include="header\LinkedListLib\SingleLinkedList.h" />
+    <ClInclude Include="header\LinkedListLib\SingleLinked\SingleNode.h" />
     <ClInclude Include="header\Main\GameService.h" />
     <ClInclude Include="header\Player\BodyPart.h" />
     <ClInclude Include="header\Player\Direction.h" />
