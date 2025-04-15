@@ -148,7 +148,7 @@
     <ClCompile Include="source\Level\LevelModel.cpp" />
     <ClCompile Include="source\Level\LevelService.cpp" />
     <ClCompile Include="source\Level\LevelView.cpp" />
-    <ClCompile Include="source\LinkedListLib\SingleLinkedList.cpp" />
+    <ClCompile Include="source\LinkedListLib\DoubleLinked\SingleLinkedList.cpp" />
     <ClCompile Include="source\Main\GameService.cpp" />
     <ClCompile Include="source\Player\BodyPart.cpp" />
     <ClCompile Include="source\Player\PlayerService.cpp" />
@@ -188,7 +188,7 @@
     <ClInclude Include="header\LinkedListLib\DoubleLinked\DoubleNode.h" />
     <ClInclude Include="header\LinkedListLib\LinkedList.h" />
     <ClInclude Include="header\LinkedListLib\Node.h" />
-    <ClInclude Include="header\LinkedListLib\SingleLinkedList.h" />
+    <ClInclude Include="header\LinkedListLib\SingleLinked\SingleLinkedList.h" />
     <ClInclude Include="header\LinkedListLib\SingleLinked\SingleNode.h" />
     <ClInclude Include="header\Main\GameService.h" />
     <ClInclude Include="header\Player\BodyPart.h" />
