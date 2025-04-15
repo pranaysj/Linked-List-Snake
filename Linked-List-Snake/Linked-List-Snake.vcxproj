@@ -183,7 +183,7 @@
     <ClInclude Include="header\Level\LevelController.h" />
     <ClInclude Include="header\Level\LevelData.h" />
     <ClInclude Include="header\Level\LevelModel.h" />
-    <ClInclude Include="header\Level\LevelNumber.h" />
+    <ClInclude Include="header\Level\LevelConfig.h" />
     <ClInclude Include="header\Level\LevelService.h" />
     <ClInclude Include="header\Level\LevelView.h" />
     <ClInclude Include="header\LinkedListLib\DoubleLinked\DoubleLinkedList.h" />
