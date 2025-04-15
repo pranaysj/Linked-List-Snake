@@ -1,12 +1,12 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
 #include "../header/Player/Direction.h"
-#include "../header/LinkedList/SingleLinkedList.h"
+#include "../header/LinkedListLib/SingleLinked/SingleLinkedList.h"
 #include "../header/Food/FoodType.h"
 
 namespace Player
 {
-	using namespace LinkedList;
+	using namespace LinkedListLib::SingleLinked;
 	using namespace Food;
 
 	enum class SnakeState

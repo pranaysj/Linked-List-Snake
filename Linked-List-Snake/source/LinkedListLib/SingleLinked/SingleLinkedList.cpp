@@ -1,3 +1,4 @@
+#include"../header/LinkedListLib/SingleLinked/SingleNode.h"
 #include"../header/LinkedListLib/SingleLinked/SingleLinkedList.h"
 
 namespace LinkedListLib
@@ -19,7 +20,7 @@ namespace LinkedListLib
 
 		Node* SingleLinkedList::createNode()
 		{
-			return new Node;
+			return new SingleNode();
 		}
 
 		void SingleLinkedList::insertNodeAtTail()
@@ -140,19 +141,6 @@ namespace LinkedListLib
 			}
 
 			initializeNode(cur_node, prev_node, Operation::TAIL);
-		}
-
-		void SingleLinkedList::updateNodeDirection(Direction direction_to_set)
-		{
-			Node* cur_node = head_node;
-			
-			while (cur_node != nullptr)
-			{
-				Direction previous_direction = cur_node->bodypart.getDirection();
-				cur_node->bodypart.setDirection(direction_to_set);
-				direction_to_set = previous_direction;
-				cur_node = cur_node->next;
-			}
 		}
 
 		void SingleLinkedList::removeNodeAtTail()
@@ -282,17 +270,6 @@ namespace LinkedListLib
 				}
 
 				removeNodeAtHead();
-			}
-		}
-
-		void SingleLinkedList::updateNodePosition()
-		{
-			Node* cur_node = head_node;
-
-			while (cur_node != nullptr)
-			{
-				cur_node->bodypart.updatePosition();
-				cur_node = cur_node->next;
 			}
 		}
 

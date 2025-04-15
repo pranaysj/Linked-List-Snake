@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <SFML/System/Vector2.hpp>
-#include "../header/LinkedList/Node.h"
+#include "../header/LinkedListLib/Node.h"
 
 namespace Element
 {

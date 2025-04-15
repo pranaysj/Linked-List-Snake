@@ -159,6 +159,7 @@
     <ClCompile Include="source\UI\Credits\CreditsScreenUIController.cpp" />
     <ClCompile Include="source\UI\Instructions\InstructionsScreenUIController.cpp" />
     <ClCompile Include="source\UI\LevelSelection\LevelSelectionUIController.cpp" />
+    <ClCompile Include="source\UI\LinkedListUI\LinkedListSelectionUIController.cpp" />
     <ClCompile Include="source\UI\MainMenu\MainMenuUIController.cpp" />
     <ClCompile Include="source\UI\SplashScreen\SplashScreenUIController.cpp" />
     <ClCompile Include="source\UI\UIElement\AnimatedImageView.cpp" />
@@ -204,6 +205,7 @@
     <ClInclude Include="header\UI\Instructions\InstructionsScreenUIController.h" />
     <ClInclude Include="header\UI\Interface\IUIController.h" />
     <ClInclude Include="header\UI\LevelSelection\LevelSelectionUIController.h" />
+    <ClInclude Include="header\UI\LinkedListUI\LinkedListSelectionUIController.h" />
     <ClInclude Include="header\UI\MainMenu\MainMenuUIController.h" />
     <ClInclude Include="header\UI\SplashScreen\SplashScreenUIController.h" />
     <ClInclude Include="header\UI\UIElement\AnimatedImageView.h" />
