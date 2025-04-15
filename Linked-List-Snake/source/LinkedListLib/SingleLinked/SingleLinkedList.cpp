@@ -145,7 +145,7 @@ namespace LinkedListLib
 		void SingleLinkedList::updateNodeDirection(Direction direction_to_set)
 		{
 			Node* cur_node = head_node;
-
+			
 			while (cur_node != nullptr)
 			{
 				Direction previous_direction = cur_node->bodypart.getDirection();
