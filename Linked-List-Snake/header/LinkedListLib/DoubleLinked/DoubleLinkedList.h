@@ -1,20 +1,19 @@
 #pragma once
-#include <SFML/System/Vector2.hpp>
 #include"../header/LinkedListLib/LinkedList.h"
 
 namespace LinkedListLib
 {
-	namespace SingleLinked
+	namespace DoubleLinked
 	{
-		class SingleLinkedList : public LinkedList
+		class DoubleLinkedList : public LinkedList
 		{
 		protected:
 
 			virtual Node* createNode() override;
 
 		public:
-			SingleLinkedList();
-			~SingleLinkedList() override;
+			DoubleLinkedList();
+			~DoubleLinkedList() override;
 
 			void initialize(float width, float height, sf::Vector2i position, Direction dir);
 			void render();
@@ -37,7 +36,6 @@ namespace LinkedListLib
 			void shiftNodesAfterRemoval(Node* cur_node);
 
 			Direction reverse() override;
-
 		};
 	}
 }
