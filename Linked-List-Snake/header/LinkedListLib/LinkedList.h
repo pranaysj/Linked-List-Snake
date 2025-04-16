@@ -58,5 +58,6 @@ namespace LinkedListLib
         void reverseNodeDirections();
 
         std::vector<sf::Vector2i> getNodesPositionList();
+
     };
 }

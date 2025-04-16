@@ -18,11 +18,12 @@ namespace LinkedListLib
 		{
 			linked_list_size++;
 			Node* new_node = createNode();
+			DoubleNode* d_node = static_cast<DoubleNode*>(new_node);
 
 			if (head_node == nullptr )
 			{
 				head_node = new_node;
-				static_cast<DoubleNode*>(new_node)->previous = nullptr;
+				d_node->previous = nullptr;
 				initializeNode(new_node, nullptr, Operation::HEAD);
 				return;
 			}

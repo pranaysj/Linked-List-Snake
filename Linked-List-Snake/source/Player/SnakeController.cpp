@@ -7,6 +7,7 @@
 #include "../header/LinkedListLib/SingleLinked/SingleLinkedList.h"
 #include "../header/LinkedListLib/DoubleLinked/DoubleLinkedList.h"
 #include "../header/Player/SnakeController.h"
+#include <iostream>
 
 namespace Player
 {
@@ -178,7 +179,10 @@ namespace Player
 			OnFoodCollected(foodtype);
 
 			playe_score++;
+
+			std::cout << linked_list->getLinkedListSize() << std::endl;
 		}
+
 	}
 
 	void SnakeController::OnFoodCollected(Food::FoodType food_type)
@@ -241,6 +245,8 @@ namespace Player
 			last_linked_list_operation = LinkedListOperations::REVERSE_LIST;
 			break;
 		}
+
+		getSnakeLength();
 	}
 	void SnakeController::reset()
 	{
@@ -284,6 +290,15 @@ namespace Player
 	bool SnakeController::isSnakeDead()
 	{
 		return current_snake_state == SnakeState::DEAD;
+	}
+
+	void SnakeController::getSnakeLength()
+	{
+		if (linked_list->getLinkedListSize() <= 1)
+		{
+			current_snake_state = SnakeState::DEAD;
+		}
+		
 	}
 
 	void SnakeController::handleRestart()
