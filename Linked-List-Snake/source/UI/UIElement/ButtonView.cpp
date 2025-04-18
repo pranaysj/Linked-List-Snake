@@ -1,7 +1,7 @@
-#include "UI/UIElement/ButtonView.h"
-#include "Global/ServiceLocator.h"
-#include "Event/EventService.h"
-#include "Sound/SoundService.h"
+#include "../header/UI/UIElement/ButtonView.h"
+#include "../header/Global/ServiceLocator.h"
+#include "../header/Event/EventService.h"
+#include "../header/Sound/SoundService.h"
 
 namespace UI
 {

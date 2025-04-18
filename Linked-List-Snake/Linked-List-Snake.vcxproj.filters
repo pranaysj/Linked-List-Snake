@@ -18,7 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Main\GameService.cpp">
+    <ClCompile Include="source\Event\EventService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Global\Config.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\Global\ServiceLocator.cpp">
@@ -27,37 +30,37 @@
     <ClCompile Include="source\Graphics\GraphicService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Level\LevelController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Level\LevelModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Level\LevelService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Level\LevelView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LinkedListLib\SingleLinked\SingleLinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Main\GameService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Player\BodyPart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Player\PlayerService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Player\SnakeController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="source\Sound\SoundService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Event\EventService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\UIService.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\SplashScreen\SplashScreenUIController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\MainMenu\MainMenuUIController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\UIElement\AnimatedImageView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\UIElement\ButtonView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Global\Config.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\UIElement\ImageView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\UIElement\TextView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\UI\UIElement\UIView.cpp">
+    <ClCompile Include="source\Time\TimeService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\UI\Credits\CreditsScreenUIController.cpp">
@@ -66,57 +69,192 @@
     <ClCompile Include="source\UI\Instructions\InstructionsScreenUIController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\UI\LevelSelection\LevelSelectionUIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\MainMenu\MainMenuUIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\SplashScreen\SplashScreenUIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIElement\AnimatedImageView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIElement\ButtonView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIElement\ImageView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIElement\RectangleShapeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIElement\TextView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIElement\UIView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\UIService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Element\Obstcale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Element\ElementService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Food\FoodItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Food\FoodService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\GameplayUI\GameplayUIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LinkedListLib\LinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LinkedListLib\DoubleLinked\DoubleLinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UI\LinkedListUI\LinkedListSelectionUIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Main\GameService.h">
+    <ClInclude Include="header\Event\EventService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Global\ServiceLocator.h">
+    <ClInclude Include="header\Global\Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Graphics\GraphicService.h">
+    <ClInclude Include="header\Global\ServiceLocator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Sound\SoundService.h">
+    <ClInclude Include="header\Graphics\GraphicService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Event\EventService.h">
+    <ClInclude Include="header\Level\LevelController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\UIService.h">
+    <ClInclude Include="header\Level\LevelData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\Interface\IUIController.h">
+    <ClInclude Include="header\Level\LevelModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\SplashScreen\SplashScreenUIController.h">
+    <ClInclude Include="header\Level\LevelConfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\MainMenu\MainMenuUIController.h">
+    <ClInclude Include="header\Level\LevelService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\UIElement\AnimatedImageView.h">
+    <ClInclude Include="header\Level\LevelView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\UIElement\ButtonView.h">
+    <ClInclude Include="header\LinkedListLib\Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Global\Config.h">
+    <ClInclude Include="header\LinkedListLib\SingleLinked\SingleLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\UIElement\ImageView.h">
+    <ClInclude Include="header\Main\GameService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\UIElement\TextView.h">
+    <ClInclude Include="header\Player\BodyPart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\UIElement\UIView.h">
+    <ClInclude Include="header\Player\Direction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\Credits\CreditsScreenUIController.h">
+    <ClInclude Include="header\Player\PlayerService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\UI\Instructions\InstructionsScreenUIController.h">
+    <ClInclude Include="header\Player\SnakeController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Sound\SoundService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Time\TimeService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\Credits\CreditsScreenUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\Instructions\InstructionsScreenUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\Interface\IUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\LevelSelection\LevelSelectionUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\MainMenu\MainMenuUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\SplashScreen\SplashScreenUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\AnimatedImageView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\ButtonView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\ImageView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\RectangleShapeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\TextView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIElement\UIView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\UIService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Element\ElementData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Element\Obstcale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Element\ElementService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Food\FoodType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Food\FoodItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\Food\FoodService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\GameplayUI\GameplayUIController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedListLib\SingleLinked\SingleNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedListLib\DoubleLinked\DoubleNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedListLib\LinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LinkedListLib\DoubleLinked\DoubleLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UI\LinkedListUI\LinkedListSelectionUIController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

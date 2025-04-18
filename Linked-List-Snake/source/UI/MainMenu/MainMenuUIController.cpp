@@ -1,10 +1,10 @@
-#include "UI/MainMenu/MainMenuUIController.h"
-#include "Main/GameService.h"
-#include "Graphics/GraphicService.h"
-#include "Sound/SoundService.h"
-#include "Event/EventService.h"
-#include "Global/Config.h"
-#include "Global/ServiceLocator.h"
+#include "../header/UI/MainMenu/MainMenuUIController.h"
+#include "../header/Main/GameService.h"
+#include "../header/Graphics/GraphicService.h"
+#include "../header/Sound/SoundService.h"
+#include "../header/Event/EventService.h"
+#include "../header/Global/Config.h"
+#include "../header/Global/ServiceLocator.h"
 
 namespace UI
 {
@@ -74,6 +74,7 @@ namespace UI
         void MainMenuUIController::playButtonCallback()
         {
             // GameState will change to gameplay state.
+            GameService::setGameState(GameState::LEVEL_SELECTION);
             ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
         }
 

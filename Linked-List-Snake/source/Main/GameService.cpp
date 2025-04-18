@@ -1,7 +1,7 @@
-#include "Main/GameService.h"
-#include "Graphics/GraphicService.h"
-#include "Event/EventService.h"
-#include "UI/UIService.h"
+#include "../header/Main/GameService.h"
+#include "../header/Graphics/GraphicService.h"
+#include "../header/Event/EventService.h"
+#include "../header/UI/UIService.h"
 
 namespace Main
 {
